@@ -14,7 +14,6 @@ print(data.describe(include='all'))
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# Load the CSV file into a DataFrame
 data = pd.read_csv('cardata.csv')
 
 # Display histograms for numerical attributes
