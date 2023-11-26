@@ -27,4 +27,4 @@ for column in numeric_columns:
     plt.xlabel(column)
     plt.ylabel('Frequency')
     plt.show()
-
+sns.scatterplot(x='Kms_Driven', y='Present_Price', data=data)
