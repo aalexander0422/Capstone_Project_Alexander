@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# Assuming 'Selling_Price' is the correct column name in your dataset
+
 data = pd.read_csv('cardata.csv')
 
 def scatter(x, fig):
@@ -15,7 +15,7 @@ def scatter(x, fig):
 plt.figure(figsize=(10, 20))
 
 scatter('Year', 1)
-scatter('Kms_Driven', 2)  # Corrected column name
+scatter('Kms_Driven', 2)  
 
 plt.tight_layout()
 plt.show()
