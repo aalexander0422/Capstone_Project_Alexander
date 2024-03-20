@@ -1,17 +1,23 @@
-# Capstone_Project_Alexander
-LINK TO REPORT 
-https://www.overleaf.com/read/vwbrkdgwxfmc#bddfbb
- The prices of new and used cars has changed drastically in the last decade. There are a number of reasons for this. The shortages of materials during the covid 19 shutdown, the economy and supply and demand may play a big part in car prices. During the pandemic auto manufactures everywhere had to shutdown to keep workers safe from the fast spreading virus. The used car market has suffered because consumers had no other option but to buy used. Even after the pandemic has subsided car prices have not reduced and are still affected.
 
-For this research the data was collected directly from the Kaggle website. Data was then cleaned by filtering to only include relevant information. Data was then explored and compelling visuals were created. Then a machine learning model was use to predict future data. Data results were then communicated and effectiveness was evaluated. 
+This study explores the recent fluctuations in car prices, taking into account the numerous factors that shape pricing dynamics. The past decade has witnessed price escalations, resulting in uncertainty among consumers regarding future trends. Leveraging both data analysis and machine learning methods, this research will forecast future changes in car prices. These insights will help in aiding individuals to better strategize their financial planning or contemplate alternative transportation avenues.
 
-This research shows the rising used car prices and also predicts what the prices will be in the future. With inflation everything is only getting more expensive. Consumers need to know what the future may hold so that they may prepare for increases in price and low availability. Consumers may use this information to plan out their everyday lives such as choosing to use public transportation, carpooling, or even sharing vehicles. 
 
-Consumers may also use this data to make a savings plan that is more accurate to rising prices. A limitation of this research is having so many outside factors that may affect car prices that may not be included in this data. These factors may include a recession, lack of materials, and other unpredictable disasters.
+In the past decade, we've witnessed a significant change in both new and used car prices. Several factors contribute to this shift, including material shortages during the COVID-19 shutdown, economic fluctuations, and the principles of supply and demand. The pandemic forced auto manufacturers worldwide to halt operations to safeguard their employees from the rapidly spreading virus. Consequently, the used car market took the brunt of consumer reliance, as individuals turned to pre-owned vehicles out of necessity. Despite the pandemic's gradual decline, car prices have yet to recede, indicating a lasting impact on the automotive 
 
-Data was found from this website: \url{ttps://www.kaggle.com/datasets/nehalbirla/vehicle-dataset-from-cardekho/discussion} This data came in a CSV format. This allows for easy organization and cleaning. This data set includes a lot of different attributes about a used car that may affect its price. These attributes include: Car Name, Year, Selling Price,	Present Price, Miles Driven, Fuel Type, and Transmission. The data is structured and contains 301 entries. There are 8 fields in each record and they include numerical and categorical data. 
 
-To start the data cleaning unneeded columns were deleted from the data using python. The columns that were deleted were Seller type and owner. These were deleted to get rid of the incomplete entries and also because these variables are not related to the vehicle price or are accounted for in the other attributes. Then in python a column named KMS which stands for kilometers was changed to miles since that is the form of measurement used in the united States. To get the correct result every entry was divided by 1.609.
+In this research endeavor, data acquisition was facilitated directly through the Kaggle platform, ensuring a complete dataset. Data cleaning procedures were implemented, selectively filtering for pertinent information to enhance accuracy. Then Exploratory analysis generated visually compelling representations to display key insights. Using machine learning techniques, a predictive model was deployed to forecast future trends based on the dataset. Finally, the findings were communicated, and the efficacy of the model was evaluated, showing the credibility and applicability of the research outcomes.
+
+
+
+
+This study sheds light on the upward trend in used car prices and offers insights into their projected trajectory. Given the influence of inflation, the cost of living continues to escalate, making it important for consumers to predict and plan for potential price hikes and scarcity. Using their predictions individuals can make informed decisions to adapt their lifestyles, such as opting for public transportation, carpooling, or embracing vehicle-sharing initiatives.
+
+This research equips consumers with valuable data to devise more precise savings strategies in anticipation of rising prices. There are limitations of this study that must be noted and taken into account. There are a multitude of external factors that may impact car prices, That are not captured in this dataset. Variables such as economic recessions, material shortages, and unforeseen events can cause unpredictability.
+
+\subsection{Data Attributes and Cleaning}
+Data was found from this website: \url{https://www.kaggle.com/datasets/nehalbirla/vehicle-dataset-from-cardekho/discussion}. The dataset was initially obtained in CSV format, offering convenient organization and cleansing capabilities. It encompasses a diverse array of attributes pertinent to used car valuation, including but not limited to Car Name, Year, Selling Price, Present Price, Miles Driven, Fuel Type, and Transmission. The dataset comprises 301 entries, each comprising 8 fields uses a mix of numerical and categorical data.
+
+In the data cleansing phase, redundant columns such as Seller type and owner were eliminated using Python. These exclusions were justified both by the presence of incomplete entries and their lack of relevance to the vehicle's pricing dynamics. A transformation was executed in Python to convert the 'KMS' column—representing kilometers—into 'Miles,' aligning with the prevailing measurement standard in the United States. This conversion was achieved by systematically dividing each entry by 1.609 to ensure accurate representation in miles.\cite{mogridge1967prediction}
 
 Here are the following attribute definitions:
 
@@ -31,22 +37,72 @@ Transmission – If the car is manual or automatic.
 
 The price is the dependent variable and the independent variables are the attributes of the car.
 
-Exploratory Data Analysis is one of the most important steps. This is where the data is explored to see what story the data is trying to tell. It is important to make sure their is a deep understanding of the data and its attributes so it is not misread. 
-First python was used to sort the data alphabetically and to display the descriptive statistics. To be able to use the descriptive built in function a virtual environment was created and activated. Then Pandas was imported. Exact python code can be found at \url{https://github.com/aalexander0422/Capstone_Project_Alexander}.
 
-Histograms were also used in the step to show the frequency and range of the data. This was a required step to insure that there was a good range of data and to determine if there are any outliers that need to be addressed. The histograms showed that this is a good range of data and there is one outlier that was needed to be removed in order to keep data reliability.
 
-Random Forest was the machine learning component chosen to analyze and predict the data. A random forest is a supervised machine learning algorithm composed of decision tree algorithms. The random forest algorithm shows the outcome based on the predictions of each of the decision trees. It predicts the outcomes by using the mean of the output from the trees. Increasing the amount of trees improves the precision of the outcome. The Random Forest is able to combine features to make predictions which is important in this case because car prices can vary based on the different attributes. The attributes in a random forest can also be quantitative and qualitative. This Random forest was shown to be very accurate and worked well with this data.
+Exploratory Data Analysis (EDA) stands as a cornerstone in the data analysis process, offering crucial insights into the dataset. This phase is pivotal for cultivating a profound comprehension of the dataset and its attributes, mitigating the risk of misinterpretation.
 
-In conclusion there is a lot of different attributes that can determine a cars price. In Figure 16 the scatter-plot shows a positively skewed trend showing that the year a car is built can affect the cars price. This also shows as time has passed and inflation continued to rise car prices have also drastically rose, because of this it can be more difficult to afford a car. Car prices are rising and most salary's have remained the same meaning it will be harder for the average person to afford a car. Something needs to be done to that cars can be more affordable or other means of transportation may have to pick up the slack and provide citizens alternative ways of transportation.
+In initiating the EDA, Python was used to alphabetically sort the data and display its descriptive statistics. This necessitated the creation and activation of a virtual environment to facilitate the utilization of built-in descriptive functions. The Pandas library was imported, laying the groundwork for comprehensive data exploration and analysis. Exact python code can be found at 
 
-References 
-1. GOYAL, S.: Car price, https://www.kaggle.com/datasets/nehalbirla/vehicle-
-dataset-from-cardekho/discussion, addendum =
- 2. Matas, A., Raymond, J.L.: Hedonic prices for cars: an application to the spanish car
- market, 1981–2005. In: The Applied Economics of Transport, pp. 99–116. Routledge
-(2014)
-3. Mbaabu, O.: Car price, https://www.section.io/engineering-
-education/introduction-to-random-forest-in-machine-learning/, addendum =
-4. Mogridge, M.J.: The prediction of car ownership. Journal of Transport Economics
-and Policy pp. 52–74 (1967)
+Histograms were used during this phase to visually represent the frequency and distribution of the data. This step was imperative to assure the depth and consistency of the dataset, while also identifying any potential outliers requiring attention. The histograms revealed a satisfactory distribution of data across the range, with the exception of a single outlier necessitating removal to uphold the integrity and reliability of the dataset.
+
+
+
+
+
+\section{Machine Learning }
+The machine learning component chosen for analysis and prediction was the Random Forest algorithm. This technique is a supervised learning algorithm, comprising multiple decision trees. Each decision tree contributes predictions, and the Random Forest aggregates these outputs to provide a final prediction, typically by averaging them. By increasing the number of trees, the algorithm's precision improves.
+What sets Random Forest apart is its capability to use many features to make predictions, a crucial aspect given the diverse attributes affecting car prices. Notably, Random Forest accommodates both quantitative and qualitative attributes, making it particularly suited for this task.
+Using the Random Forest in this context showed to be effective, showcasing its high accuracy and compatibility with the dataset at hand. \cite{website02}
+
+\section{Results of Random Forest }
+
+\begin{figure}[h!]
+  \centering
+\includegraphics[width=0.8\linewidth]{heatmap.png}
+  \caption{ Heat Map showing the correlation of the different attributes}
+  \label{fig:12}
+  
+\end{figure}
+\begin{figure}[h!]
+  \centering
+\includegraphics[width=0.9\linewidth]{results1.png}
+  \caption{Diagram showing how relevant each attribute is to sales price}
+  \label{fig:13}
+  
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+\includegraphics[width=0.9\linewidth]{results3.png}
+  \caption{Diagram showing the accuracy of the Random Forest}
+  \label{fig:15}
+  
+\end{figure}
+ \pagebreak 
+  \pagebreak 
+\section{ Further Analysis and Conclusion }
+In summary, numerous factors contribute to determining the price of a car. As depicted in Figure 16, the scatter plot illustrates a positively skewed trend, highlighting the influential role of the car's production year on its price. Notably, over time, as inflation has continued to escalate, car prices have seen a corresponding significant increase. This trend poses challenges for affordability, particularly as most salaries have remained stagnant. This disparity between rising car prices and stagnant incomes shows the growing difficulty for the average individual to purchase a car.
+
+Addressing this issue is imperative to ensure fair access to transportation options. Efforts must be directed towards making cars more affordable or exploring alternative modes of transportation to alleviate the burden on citizens. Failure to address this issues risks increasing transportation issues and hindering mobility for many individuals.\cite{matas2014hedonic}
+\begin{figure}[h!]
+  \centering
+\includegraphics[width=0.8\linewidth]{yearvsprice.png}
+  \caption{Year a Car was Manufactured vs Price }
+  \label{fig:16}
+  
+\end{figure}
+
+
+
+
+
+
+
+\bibliographystyle{splncs04}
+\bibliography{mybibliography}
+
+
+
+
+\end{document}
+
